@@ -20,16 +20,17 @@ function Top() {
               <p>Välkommen!</p>
           </div>
           <div>
-              <Navbar className="custom-navbar-background" variant="dark">
-                  <Container>
-                      <Navbar.Brand href="#home">Startsida</Navbar.Brand>
-                      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                      <Navbar.Collapse id="basic-navbar-nav">
-                          <Nav className="me-auto">
-                              <Nav.Link href="#notes" disabled>Anteckningar (kommande funktion)</Nav.Link>
-                              <Nav.Link href="#to-do" disabled>To-do (kommande funktion)</Nav.Link>
-                          </Nav>
-                      </Navbar.Collapse>
+              <Navbar bg="dark" variant="dark" expand="lg">
+              <Container>
+                  <Navbar.Brand href="#home">MyApp</Navbar.Brand>
+                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                      <Nav.Link href="#home">Home</Nav.Link>
+                      <Nav.Link href="#about">About</Nav.Link>
+                      <Nav.Link href="#contact">Contact</Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
                   </Container>
               </Navbar>
           </div>
