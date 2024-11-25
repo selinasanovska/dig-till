@@ -4,7 +4,7 @@ import "./Components.css";
 function Content2() {
   return (
     <main className="main-content">
-      <h2>Title 2</h2>
+      <a name="Content2" /><h2>Title 2</h2>
       <p className="description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
         consequat, justo in dapibus cursus.

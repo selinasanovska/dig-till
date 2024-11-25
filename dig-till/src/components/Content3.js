@@ -1,10 +1,10 @@
 import React from "react";
 import "./Components.css";
 
-function Content1() {
+function Content3() {
   return (
     <main className="main-content">
-      <a name="Content1" /><h2>Title 1</h2>
+      <a name="Content3" /><h2>Title 3</h2>
       <p className="description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
         consequat, justo in dapibus cursus.
@@ -31,4 +31,4 @@ function Content1() {
   );
 }
 
-export default Content1;
+export default Content3;
