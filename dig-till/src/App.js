@@ -4,7 +4,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Content1 from "./components/Content1";
-import Content2 from "./components/Content2";
+import Accordion from "./components/Content2";
 import Content3 from "./components/Content3";
 
 function App() {
@@ -14,26 +14,34 @@ function App() {
       <div className="container mt-5">
         <Content1 />
         <div className="divider"></div>
-        <Content2 />
+        <Accordion />
         <div className="divider"></div>
         <Content3 />
       </div>
       <Bottom />
     </div>
-
   );
 }
 
 function Top() {
   return (
-    <div className="bg-white text-center pt-2 sticky-top" style={{ zIndex: 1030 }}>
+    <div
+      className="bg-white text-center pt-2 sticky-top"
+      style={{ zIndex: 1030 }}
+    >
       <h1 style={{ fontWeight: "bold" }}>Digitalt utbildningsmaterial</h1>
       <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
-            <li className="nav-item py-2"><a href="#Content1">Content 1</a></li>
-            <li className="nav-item py-2"><a href="#Content2">Content 2</a></li>
-            <li className="nav-item py-2"><a href="#Content3">Content 3</a></li>
+            <li className="nav-item py-2">
+              <a href="#Content1">Content 1</a>
+            </li>
+            <li className="nav-item py-2">
+              <a href="#Accordion">Accordion</a>
+            </li>
+            <li className="nav-item py-2">
+              <a href="#Content3">Content 3</a>
+            </li>
           </ul>
         </div>
       </nav>
