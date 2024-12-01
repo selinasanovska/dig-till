@@ -12,7 +12,7 @@ function Content3() {
 
       <div className="comparison-container">
         <div className="comparison-box">
-          <h3>Code with WCAG</h3>
+          <h3>Code without WCAG</h3>
           <div className="image-placeholder">Img</div>
           <p className="comparison-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -20,7 +20,7 @@ function Content3() {
         </div>
 
         <div className="comparison-box">
-          <h3>Code without WCAG</h3>
+          <h3>Code with WCAG</h3>
           <div className="image-placeholder">Img</div>
           <p className="comparison-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
