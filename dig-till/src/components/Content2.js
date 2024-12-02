@@ -7,7 +7,7 @@ function Content2() {
   return (
     <main className="main-content">
       <a name="Accordion" />
-      <h2>Accordion</h2>
+      <h2 style={{ fontWeight: "bold" }}>Accordion</h2>
       <p className="description">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
         consequat, justo in dapibus cursus.
