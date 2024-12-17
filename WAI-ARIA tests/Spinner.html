@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible vs Non-Accessible Spinner</title>
+    <style>
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ccc;
+            border-top: 5px solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: none;
+            /* Initially hidden */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Accessible vs Non-Accessible Spinner</h1>
+
+    <!-- Non-Accessible Spinner -->
+    <div>
+        <button id="showNonAccessibleSpinnerButton">Show Non-Accessible Spinner</button>
+        <div id="nonAccessibleSpinnerContainer">
+            <div class="spinner" id="nonAccessibleSpinner"></div>
+            <!-- No accessible text or ARIA roles -->
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Accessible Spinner -->
+    <div>
+        <button id="showAccessibleSpinnerButton">Show Accessible Spinner</button>
+        <div id="accessibleSpinnerContainer" role="status" aria-live="polite">
+            <div class="spinner" id="accessibleSpinner"></div>
+            <span class="visually-hidden" id="accessibleSpinnerText"></span>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        // Accessible Spinner
+        const accessibleButton = document.getElementById('showAccessibleSpinnerButton');
+        const accessibleSpinner = document.getElementById('accessibleSpinner');
+        const accessibleSpinnerText = document.getElementById('accessibleSpinnerText');
+
+        accessibleButton.addEventListener('click', () => {
+            accessibleSpinner.style.display = 'block'; // Show the spinner
+            accessibleSpinnerText.textContent = 'Loading...'; // Add text to the live region
+
+            // Ensure the screen reader announces the change
+            setTimeout(() => {
+                accessibleSpinnerText.textContent = ''; // Clear the text after a short delay
+            }, 2000); // Adjust the delay as needed
+        });
+
+        // Non-Accessible Spinner
+        const nonAccessibleButton = document.getElementById('showNonAccessibleSpinnerButton');
+        const nonAccessibleSpinner = document.getElementById('nonAccessibleSpinner');
+
+        nonAccessibleButton.addEventListener('click', () => {
+            nonAccessibleSpinner.style.display = 'block'; // Show the non-accessible spinner
+        });
+    </script>
+</body>
+
+</html>
