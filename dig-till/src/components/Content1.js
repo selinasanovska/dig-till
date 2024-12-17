@@ -1,5 +1,7 @@
 import React from "react";
 import "./Components.css";
+import badPictureVideo from "../assets/BadPicture.mp4";
+import goodPictureVideo from "../assets/GoodPicture.mp4";
 
 function Content1() {
   return (
@@ -31,6 +33,12 @@ function Content1() {
               src="picBadExample.jpg"
               style={{ display: "block", maxWidth: "100%", height: "auto" }}
             />
+          </div>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={badPictureVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
@@ -65,6 +73,12 @@ function Content1() {
               src="picGoodExample.jpg"
               style={{ display: "block", maxWidth: "100%", height: "auto" }}
             />
+          </div>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={goodPictureVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">

@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
     background-color: #ccc; /* Optional: keeps a background in case the image doesn't load */
+    margin-top: 10px;
   }
   
   .image-container img {

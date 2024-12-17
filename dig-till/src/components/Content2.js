@@ -2,6 +2,8 @@ import React from "react";
 import "./Components.css";
 import accordionUtan from "../assets/Accordion_utan.png";
 import accordionMed from "../assets/Accordion_med.png";
+import badAccordionVideo from "../assets/BadAccordion.mp4";
+import goodAccordionVideo from "../assets/GoodAccordion.mp4";
 
 function Content2() {
   return (
@@ -23,6 +25,12 @@ function Content2() {
           <div className="image-container">
             <img tabIndex="0" src={accordionUtan} alt="Kod utan WAI-ARIA" />
           </div>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={badAccordionVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
               Dåligt Exempel
@@ -37,6 +45,12 @@ function Content2() {
           </h3>
           <div className="image-container">
             <img tabIndex="0" src={accordionMed} alt="Kod med WAI-ARIA" />
+          </div>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={goodAccordionVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
