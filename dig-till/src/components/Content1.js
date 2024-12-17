@@ -10,7 +10,15 @@ function Content1() {
       <h2 style={{ fontWeight: "bold" }} tabIndex="0" id="Content1">
         Bilder - Alt texter
       </h2>
-      <p className="description" tabindex="0">
+      <p className="description" tabindex="0" style={{ textAlign: "left" }}>
+        Alt-texter (alternativa texter) är beskrivningar som används i HTML för att ge en textbaserad förklaring av en
+        bild. De anges med attributet alt i {'<img>'}-taggen. Alt-texter är viktiga för att göra webbplatser tillgängliga
+        för användare som inte kan se bilder, till exempel personer med synnedsättning som använder skärmläsare. De
+        används också som fallback om en bild inte kan laddas.
+        <br />
+        En bra alt-text beskriver bildens innehåll och syfte på ett kortfattat och relevant sätt. Dåliga eller
+        saknade alt-texter kan göra det svårt för användare att förstå bildens betydelse.
+        <br />
         Läs mer här angående alt-texter på WCAGs hemsida:{" "}
         <a
           href="https://www.w3.org/TR/WCAG22/#non-text-content"

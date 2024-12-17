@@ -12,9 +12,14 @@ function Content2() {
       <h2 style={{ fontWeight: "bold" }} tabIndex="0">
         Accordion
       </h2>
-      <p className="description" tabIndex="0">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-        consequat, justo in dapibus cursus.
+      <p className="description" tabIndex="0" style={{ textAlign: "left" }}>
+        En accordion är en UI-komponent som används för att visa och dölja innehåll i sektioner. När en sektion
+        expanderas visas dess innehåll, och när den kollapsas döljs det. Accordions är vanliga på webbplatser för
+        att organisera information och spara utrymme.
+        <br />
+        För att vara tillgängliga måste accordions utformas så att de fungerar för alla användare, inklusive de som
+        använder skärmläsare eller navigerar med tangentbord. Dåligt designade accordions kan skapa problem för användare
+        med funktionsnedsättningar, medan väl designade accordions säkerställer en inkluderande upplevelse.
       </p>
 
       <div className="comparison-container">
@@ -35,7 +40,20 @@ function Content2() {
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
               Dåligt Exempel
             </h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <ul style={{ textAlign: "left" }}>
+              <li tabIndex="0">
+                En icke-tillgänglig accordion saknar korrekt semantik och ARIA-attribut, vilket gör den svår eller omöjlig
+                att använda för personer med funktionsnedsättningar.
+                <br />
+                Ingen feedback för skärmläsare:
+                När sektionen öppnas eller stängs får skärmläsare ingen information om vad som händer.
+              </li>
+              <li tabIndex="0">
+                Dålig tangentbordsnavigering:
+                Eftersom div-element används istället för knappar, kan användare inte navigera eller aktivera accordionen
+                med tangentbordet.
+              </li>
+            </ul>
           </p>
         </div>
 
@@ -56,7 +74,17 @@ function Content2() {
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
               Bra Exempel
             </h4>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <ul style={{ textAlign: "left" }}>
+              <li tabIndex="0">
+                Användning av ARIA-attribut:
+                Attributet aria-expanded anger om sektionen är öppen eller stängd, vilket gör det tydligt för skärmläsare.
+                <br />
+                Attributet aria-controls kopplar knappen till innehållssektionen, så skärmläsare vet vilket innehåll som
+                styrs av knappen.
+                <br />
+                Innehållssektionen har role="region" och aria-labelled by, vilket gör att skärmläsare kan identifiera och beskriva sektionen.
+              </li>
+            </ul>
           </p>
         </div>
       </div>
