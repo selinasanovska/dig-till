@@ -2,6 +2,8 @@ import React from "react";
 import "./Components.css";
 import badPictureVideo from "../assets/BadPicture.mp4";
 import goodPictureVideo from "../assets/GoodPicture.mp4";
+import bildBra from "../assets/BilderBra.png";
+import bildDålig from "../assets/BilderBad.png";
 
 function Content1() {
   return (
@@ -26,13 +28,8 @@ function Content1() {
           <h3 style={{ fontWeight: "bold" }} tabindex="0">
             Kod utan WAI-ARIA
           </h3>
-          <div>
-            <img
-              tabindex="0"
-              alt="Kod utan WAI-ARIA"
-              src="picBadExample.jpg"
-              style={{ display: "block", maxWidth: "100%", height: "auto" }}
-            />
+          <div className="image-container">
+            <img tabIndex="0" src={bildDålig} alt="Kod utan WAI-ARIA" />
           </div>
           <div className="image-container">
             <video width="100%" controls>
@@ -66,13 +63,8 @@ function Content1() {
           <h3 style={{ fontWeight: "bold" }} tabIndex="0">
             Kod med WAI-ARIA
           </h3>
-          <div>
-            <img
-              tabIndex="0"
-              alt="Kod med WAI-ARIA"
-              src="picGoodExample.jpg"
-              style={{ display: "block", maxWidth: "100%", height: "auto" }}
-            />
+          <div className="image-container">
+            <img tabIndex="0" src={bildBra} alt="Kod med WAI-ARIA" />
           </div>
           <div className="image-container">
             <video width="100%" controls>
