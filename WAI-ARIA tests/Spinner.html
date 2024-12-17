@@ -27,6 +27,8 @@
             }
         }
 
+        .button {margin-bottom: 1000px;}
+
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -41,11 +43,11 @@
 </head>
 
 <body>
-    <h1>Accessible vs Non-Accessible Spinner</h1>
-
+    <h1 tabindex="0">Non-Accessible Spinner</h1>
     <!-- Non-Accessible Spinner -->
-    <div>
-        <button id="showNonAccessibleSpinnerButton">Show Non-Accessible Spinner</button>
+    <div class="button">
+        <button id="showNonAccessibleSpinnerButton">
+            Show Non-Accessible Spinner</button>
         <div id="nonAccessibleSpinnerContainer">
             <div class="spinner" id="nonAccessibleSpinner"></div>
             <!-- No accessible text or ARIA roles -->
@@ -54,8 +56,9 @@
 
     <hr>
 
+    <h1 tabindex="0">Accessible Spinner</h1>
     <!-- Accessible Spinner -->
-    <div>
+    <div class="button">
         <button id="showAccessibleSpinnerButton">Show Accessible Spinner</button>
         <div id="accessibleSpinnerContainer" role="status" aria-live="polite">
             <div class="spinner" id="accessibleSpinner"></div>
@@ -72,25 +75,43 @@
         const accessibleButton = document.getElementById('showAccessibleSpinnerButton');
         const accessibleSpinner = document.getElementById('accessibleSpinner');
         const accessibleSpinnerText = document.getElementById('accessibleSpinnerText');
-
+    
         accessibleButton.addEventListener('click', () => {
             accessibleSpinner.style.display = 'block'; // Show the spinner
             accessibleSpinnerText.textContent = 'Loading...'; // Add text to the live region
-
+    
             // Ensure the screen reader announces the change
             setTimeout(() => {
                 accessibleSpinnerText.textContent = ''; // Clear the text after a short delay
             }, 2000); // Adjust the delay as needed
+    
+            // Announce "Loading..." when the spinner appears
+            setTimeout(() => {
+                accessibleSpinnerText.textContent = 'Loading...'; // Re-announce the loading text
+            }, 100); // Make sure the announcement happens immediately after the spinner is shown
+    
+            // Stop the spinner after 3 seconds and announce "Done loading"
+            setTimeout(() => {
+                accessibleSpinner.style.display = 'none'; // Hide the spinner after 3 seconds
+                accessibleSpinnerText.textContent = 'Done loading.'; // Announce the completion
+            }, 3000); // 3000 ms = 3 seconds
         });
-
+    
         // Non-Accessible Spinner
         const nonAccessibleButton = document.getElementById('showNonAccessibleSpinnerButton');
         const nonAccessibleSpinner = document.getElementById('nonAccessibleSpinner');
-
+    
         nonAccessibleButton.addEventListener('click', () => {
             nonAccessibleSpinner.style.display = 'block'; // Show the non-accessible spinner
+    
+            // Stop the non-accessible spinner after 3 seconds
+            setTimeout(() => {
+                nonAccessibleSpinner.style.display = 'none'; // Hide the spinner after 3 seconds
+            }, 3000); // 3000 ms = 3 seconds
         });
     </script>
+    
+    
 </body>
 
 </html>

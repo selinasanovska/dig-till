@@ -36,13 +36,13 @@ function Top() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item py-2">
-              <a href="#Content1">Bilder</a>
+              <a href="#Content1">Bilder - Alt texter</a>
             </li>
             <li className="nav-item py-2">
               <a href="#Accordion">Accordion</a>
             </li>
             <li className="nav-item py-2">
-              <a href="#Content3">Content 3</a>
+              <a href="#Content3">Spinner/Loader</a>
             </li>
           </ul>
         </div>
