@@ -29,7 +29,9 @@ function Top() {
       className="bg-white text-center pt-2 sticky-top"
       style={{ zIndex: 1030 }}
     >
-      <h1 style={{ fontWeight: "bold" }}>Digitalt utbildningsmaterial</h1>
+      <h1 style={{ fontWeight: "bold" }} tabIndex="0">
+        Digitalt utbildningsmaterial
+      </h1>
       <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">

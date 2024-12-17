@@ -7,35 +7,41 @@ function Content2() {
   return (
     <main className="main-content">
       <a name="Accordion" />
-      <h2 style={{ fontWeight: "bold" }}>Accordion</h2>
-      <p className="description">
+      <h2 style={{ fontWeight: "bold" }} tabIndex="0">
+        Accordion
+      </h2>
+      <p className="description" tabIndex="0">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
         consequat, justo in dapibus cursus.
       </p>
 
       <div className="comparison-container">
         <div className="comparison-box">
-          <h3 style={{ fontWeight: "bold" }}>Kod utan WAI-ARIA</h3>
+          <h3 style={{ fontWeight: "bold" }} tabIndex="0">
+            Kod utan WAI-ARIA
+          </h3>
           <div className="image-container">
-            <img src={accordionUtan} alt="Accordion Image" />
+            <img tabIndex="0" src={accordionUtan} alt="Kod utan WAI-ARIA" />
           </div>
           <p className="comparison-text">
-            <h1 style={{ fontSize: "20px", fontWeight: "bold" }}>
+            <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
               Dåligt Exempel
-            </h1>
+            </h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
 
         <div className="comparison-box">
-          <h3 style={{ fontWeight: "bold" }}>Kod med WAI-ARIA</h3>
+          <h3 style={{ fontWeight: "bold" }} tabIndex="0">
+            Kod med WAI-ARIA
+          </h3>
           <div className="image-container">
-            <img src={accordionMed} alt="Accordion Image" />
+            <img tabIndex="0" src={accordionMed} alt="Kod med WAI-ARIA" />
           </div>
           <p className="comparison-text">
-            <h1 style={{ fontSize: "20px", fontWeight: "bold" }}>
+            <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
               Bra Exempel
-            </h1>
+            </h4>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
         </div>
