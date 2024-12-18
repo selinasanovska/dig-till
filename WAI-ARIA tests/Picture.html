@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Example: Missing or Misused Alt Text</title>
+</head>
+<style>
+    .example-section {
+        margin-bottom: 1000px; /* Adds space between accordions */
+    }
+    .image {
+        width: 600px;
+        margin-right: 30px;
+    }
+</style>
+<body>
+    <div class="example-section">
+        
+        <h1 tabindex="0">Bad Example: Missing or Misused Alt Text</h1>
+
+        <!-- Image with no alt attribute -->
+        <img src="stockvault-christmas-tree191234.jpg" width="400">
+
+        <!-- Image with empty alt attribute but no purpose 
+        <img  src="stockvault-christmas-tree191234.jpg" width="400" alt=""> -->
+
+        <!-- Image with unhelpful alt text -->
+        <img  src="stockvault-christmas-tree191234.jpg" width="400" alt="Image">
+
+    </div>
+
+
+    <div class="example-section">
+        <h1 tabindex="0">Good Example: Proper Alt Text Usage</h1>
+
+        <!-- Image with descriptive alt text -->
+        <img src="stockvault-christmas-tree191234.jpg" class="image"
+            alt="Decorated Christmas tree with various ornaments and lights stands in a warmly lit room">
+
+        <!-- Decorative image with empty alt attribute -->
+        <img src="moroccan-flower.png" alt="" aria-hidden="true">
+    </div>
+</body>
+
+</html>
