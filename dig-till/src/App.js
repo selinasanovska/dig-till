@@ -32,17 +32,17 @@ function Top() {
       <h1 style={{ fontWeight: "bold" }} tabIndex="0">
         Digitalt utbildningsmaterial
       </h1>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light p-0">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-0">
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item py-2">
-              <a href="#Content1">Bilder - Alt texter</a>
+              <a href="#Bild" className="custom-hover">Bild - Alt texter</a>
             </li>
             <li className="nav-item py-2">
-              <a href="#Accordion">Accordion</a>
+              <a href="#Accordion" className="custom-hover">Accordion</a>
             </li>
             <li className="nav-item py-2">
-              <a href="#Content3">Spinner/Loader</a>
+              <a href="#Spinner" className="custom-hover">Spinner/Loader</a>
             </li>
           </ul>
         </div>

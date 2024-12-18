@@ -8,11 +8,11 @@ import bildDålig from "../assets/BilderBad.png";
 function Content1() {
   return (
     <main className="main-content" role="main">
-      <a name="Content1" />
-      <h2 style={{ fontWeight: "bold" }} tabIndex="0" id="Content1">
-        Bilder - Alt texter
+      <a name="Bild" />
+      <h2 style={{ fontWeight: "bold" }} tabIndex="0">
+        Bild - Alt texter
       </h2>
-      <p className="description" tabindex="0" style={{ textAlign: "left" }}>
+      <p tabIndex="0" style={{ textAlign: "left" }}>
         Alt-texter (alternativa texter) är beskrivningar som används i HTML för att ge en textbaserad förklaring av en
         bild. De anges med attributet alt i {'<img>'}-taggen. Alt-texter är viktiga för att göra webbplatser tillgängliga
         för användare som inte kan se bilder, till exempel personer med synnedsättning som använder skärmläsare. De
@@ -34,29 +34,25 @@ function Content1() {
       <div className="comparison-container">
         <div className="comparison-box">
           <h3 style={{ fontWeight: "bold" }} tabindex="0">
-            Kod utan WAI-ARIA
+            <br />
+            Dåligt exempel
           </h3>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Kod utan WAI-ARIA
+          </h4>
           <div className="image-container">
             <img tabIndex="0" src={bildDålig} alt="Kod utan WAI-ARIA" />
           </div>
-          <div className="image-container">
-            <video width="100%" controls>
-              <source src={badPictureVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <div className="divider"></div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
-              Dåligt exempel
+              Problem
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
                 Den första bilden har inget <code>alt</code>-attribut, vilket
                 gör den otillgänglig för skärmläsare.
-              </li>
-              <li tabIndex="0">
-                Den andra bilden har ett tomt <code>alt</code>-attribut men
-                ingen tydlig indikation på att den är dekorativ.
               </li>
               <li tabIndex="0">
                 Den tredje bilden använder generisk och oanvändbar{" "}
@@ -65,24 +61,34 @@ function Content1() {
               </li>
             </ul>
           </p>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Hur detta tolkas i en skärmläsare
+          </h4>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={badPictureVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
 
         <div className="comparison-box">
           <h3 style={{ fontWeight: "bold" }} tabIndex="0">
-            Kod med WAI-ARIA
+            <br />
+            Bra exempel
           </h3>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Kod med WAI-ARIA
+          </h4>
           <div className="image-container">
             <img tabIndex="0" src={bildBra} alt="Kod med WAI-ARIA" />
           </div>
-          <div className="image-container">
-            <video width="100%" controls>
-              <source src={goodPictureVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <div className="divider"></div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
-              Bra exempel
+              Lösning
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
@@ -97,6 +103,16 @@ function Content1() {
               </li>
             </ul>
           </p>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Hur detta tolkas i en skärmläsare
+          </h4>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={goodPictureVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </main>

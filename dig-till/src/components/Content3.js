@@ -8,7 +8,7 @@ import goodSpinnerVideo from "../assets/GoodSpinner.mp4";
 function Content3() {
   return (
     <main className="main-content">
-      <a name="Content3" />
+      <a name="Spinner" />
       <h2 style={{ fontWeight: "bold" }} tabIndex="0">
         Spinner/Loader
       </h2>
@@ -30,20 +30,20 @@ function Content3() {
       <div className="comparison-container">
         <div className="comparison-box">
           <h3 style={{ fontWeight: "bold" }} tabIndex="0">
-            Kod utan WAI-ARIA
+            <br />
+            Dåligt exempel
           </h3>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Kod utan WAI-ARIA
+          </h4>
           <div className="image-container">
             <img tabIndex="0" src={spinnerBad} alt="Kod utan WAI-ARIA" />
           </div>
-          <div className="image-container">
-            <video width="100%" controls>
-              <source src={badSpinnerVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <div className="divider"></div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
-              Dåligt Exempel
+              Problem
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
@@ -54,8 +54,7 @@ function Content3() {
               </li>
 
               <li tabIndex="0">
-                En spinner utan ARIA-attribut, som exempelvis role="status"
-                eller aria-live, gör att användare med skärmläsare inte får
+                En spinner utan ARIA-attribut, gör att användare med skärmläsare inte får
                 någon information om att sidan laddar. Eftersom det saknas en
                 textbeskrivning, som till exempel "Laddar...", är skärmläsare
                 omedvetna om spinnerns existens och syfte. Detta innebär att
@@ -64,37 +63,46 @@ function Content3() {
               </li>
             </ul>
           </p>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Hur detta tolkas i en skärmläsare
+          </h4>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={badSpinnerVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
 
         <div className="comparison-box">
           <h3 style={{ fontWeight: "bold" }} tabIndex="0">
-            Kod med WAI-ARIA
+            <br />
+            Bra exempel
           </h3>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Kod med WAI-ARIA
+          </h4>
           <div className="image-container">
             <img tabIndex="0" src={spinnerBra} alt="Kod med WAI-ARIA" />
           </div>
-          <div className="image-container">
-            <video width="100%" controls>
-              <source src={goodSpinnerVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <div className="divider"></div>
           <p className="comparison-text">
             <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
-              Bra Exempel
+              Lösning
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
                 Kompatibilitet med skärmläsare: Spinnern är innesluten i en
-                behållare med attributen role="status" och aria-live="polite".
+                behållare med attributen <code>role="status"</code> och <code>aria-live="polite"</code>.
                 Dessa attribut informerar skärmläsare om att innehållet i
                 behållaren är dynamiskt och bör meddelas när det ändras.
                 <br />
-                Ett visuellt dolt {"<span>"}-element används för att ge en
+                Ett visuellt dolt <code>span</code>-element används för att ge en
                 textbeskrivning ("Laddar...") av spinnern. Detta säkerställer
                 att skärmläsare meddelar spinnerns syfte när den visas.
               </li>
-
               <li tabIndex="0">
                 Dynamiska uppdateringar: När spinnern visas uppdateras
                 live-regionen med texten "Laddar...". Detta gör att skärmläsaren
@@ -106,6 +114,16 @@ function Content3() {
               </li>
             </ul>
           </p>
+          <div className="divider"></div>
+          <h4 style={{ fontSize: "20px", fontWeight: "bold" }} tabIndex="0">
+            Hur detta tolkas i en skärmläsare
+          </h4>
+          <div className="image-container">
+            <video width="100%" controls>
+              <source src={goodSpinnerVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </main>
