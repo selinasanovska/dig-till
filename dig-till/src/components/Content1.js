@@ -55,7 +55,7 @@ function Content1() {
                 gör den otillgänglig för skärmläsare.
               </li>
               <li tabIndex="0">
-                Den tredje bilden använder generisk och oanvändbar{" "}
+                Den andra bilden använder generisk och oanvändbar{" "}
                 <code>alt</code>-text ("Bild"), vilket inte ger någon
                 meningsfull kontext.
               </li>
