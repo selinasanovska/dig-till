@@ -15,7 +15,7 @@ function Content2() {
       <p tabIndex="0" style={{ textAlign: "left" }}>
         En accordion är en UI-komponent som används för att visa och dölja innehåll i sektioner. När en sektion
         expanderas visas dess innehåll, och när den kollapsas döljs det. Accordions är vanliga på webbplatser för
-        att organisera information och spara utrymme.
+        att organisera information och spara uctrymme.
         <br />
         För att vara tillgängliga måste accordions utformas så att de fungerar för alla användare, inklusive de som
         använder skärmläsare eller navigerar med tangentbord. Dåligt designade accordions kan skapa problem för användare
@@ -42,8 +42,8 @@ function Content2() {
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
-                Saknar semantisk HTML: <code>div</code>-element används istället för knappar, vilket gör det svårt
-                för skärmläsare att förstå att det är ett interaktivt element. Detta beror på att <code>div</code>-element
+                Saknar semantisk HTML: <code className="custom-code">div</code>-element används istället för knappar, vilket gör det svårt
+                för skärmläsare att förstå att det är ett interaktivt element. Detta beror på att <code className="custom-code">div</code>-element
                 inte är fokuserbara av tangentbord. Därför kan skärmläsar användare inte navigera och aktivera accordionen.
               </li>
               <li tabIndex="0">
@@ -84,14 +84,14 @@ function Content2() {
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
                 Användning av ARIA-attribut:
-                Attributet <code>aria-expanded</code> anger om sektionen är öppen eller stängd, vilket gör det tydligt för skärmläsare.
+                Attributet <code className="custom-code">aria-expanded</code> anger om sektionen är öppen eller stängd, vilket gör det tydligt för skärmläsare.
               </li>
               <li tabIndex="0">
-                Attributet <code>aria-controls</code> kopplar knappen till innehållssektionen, så skärmläsare vet vilket innehåll som
+                Attributet <code className="custom-code">aria-controls</code> kopplar knappen till innehållssektionen, så skärmläsare vet vilket innehåll som
                 styrs av knappen.
               </li>
               <li tabIndex="0">
-                Innehållssektionen har <code>role="region"</code> och <code>aria-labelledby</code>, vilket gör att
+                Innehållssektionen har <code className="custom-code">role="region"</code> och <code className="custom-code">aria-labelledby</code>, vilket gör att
                 skärmläsare kan identifiera och beskriva sektionen.
               </li>
             </ul>

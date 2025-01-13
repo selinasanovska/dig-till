@@ -95,11 +95,11 @@ function Content3() {
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
                 Kompatibilitet med skärmläsare: Spinnern är innesluten i en
-                behållare med attributen <code>role="status"</code> och <code>aria-live="polite"</code>.
+                behållare med attributen <code className="custom-code">role="status"</code> och <code className="custom-code">aria-live="polite"</code>.
                 Dessa attribut informerar skärmläsare om att innehållet i
                 behållaren är dynamiskt och bör meddelas när det ändras.
                 <br />
-                Ett visuellt dolt <code>span</code>-element används för att ge en
+                Ett visuellt dolt <code className="custom-code">span</code>-element används för att ge en
                 textbeskrivning ("Laddar...") av spinnern. Detta säkerställer
                 att skärmläsare meddelar spinnerns syfte när den visas.
               </li>

@@ -26,6 +26,7 @@ function Content1() {
           href="https://www.w3.org/TR/WCAG22/#non-text-content"
           target="_blank"
           rel="noopener noreferrer"
+          className="accessible-link"
         >
           WCAG
         </a>
@@ -51,12 +52,12 @@ function Content1() {
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
-                Den första bilden har inget <code>alt</code>-attribut, vilket
+                Den första bilden har inget <code className="custom-code">alt</code>-attribut, vilket
                 gör den otillgänglig för skärmläsare.
               </li>
               <li tabIndex="0">
                 Den andra bilden använder generisk och oanvändbar{" "}
-                <code>alt</code>-text ("Bild"), vilket inte ger någon
+                <code className="custom-code">alt</code>-text ("Bild"), vilket inte ger någon
                 meningsfull kontext.
               </li>
             </ul>
@@ -92,13 +93,13 @@ function Content1() {
             </h4>
             <ul style={{ textAlign: "left" }}>
               <li tabIndex="0">
-                Den första bilden innehåller ett beskrivande <code>alt</code>
+                Den första bilden innehåller ett beskrivande <code className="custom-code">alt</code>
                 -attribut som förmedlar bildens innehåll och syfte.
               </li>
               <li tabIndex="0">
                 Den andra bilden är dekorativ, så den använder ett tomt{" "}
-                <code>alt</code>-attribut (<code>alt=""</code>) och attributet{" "}
-                <code>aria-hidden="true"</code> för att säkerställa att den
+                <code className="custom-code">alt</code>-attribut (<code className="custom-code">alt=""</code>)
+                och attributet{" "} <code className="custom-code">aria-hidden="true"</code> för att säkerställa att den
                 ignoreras av skärmläsare.
               </li>
             </ul>
